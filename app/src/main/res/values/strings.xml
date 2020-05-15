@@ -2,6 +2,5 @@
     <string name="app_name">Timer</string>
 
     <string name="empty_text" />
-    <string name="your_timer">your timer</string>
-    <string name="start">Start</string>
+    <string name="action_settings">Settings</string>
 </resources>
