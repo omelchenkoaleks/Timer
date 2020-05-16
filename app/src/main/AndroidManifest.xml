@@ -9,8 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".test_timer.MainTestActivity"></activity>
-        <activity android:name=".TimerActivity">
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".TimerActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.omelchenkoaleks.timer.TimerActivity" />
+        </activity>
+
+        <receiver
+            android:name=".TimerExpiredReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".TimerActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
